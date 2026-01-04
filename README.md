@@ -1,1 +1,1 @@
-한입 NEXT.js Challenge
+한입 NEXT.js
