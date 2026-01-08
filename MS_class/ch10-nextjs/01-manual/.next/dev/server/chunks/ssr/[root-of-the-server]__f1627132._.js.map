@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/merry/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/oneBite_Next/MS_class/ch10-nextjs/01-manual/app/page.tsx"],"sourcesContent":["export default function MainPage() {\r\n  return <h1>Hello, Next.js</h1>;\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBAAO,8OAAC;kBAAG;;;;;;AACb"}}]
+}
