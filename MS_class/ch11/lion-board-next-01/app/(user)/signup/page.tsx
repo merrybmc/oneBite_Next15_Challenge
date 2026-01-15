@@ -1,4 +1,18 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: `회원가입 - 라이언 보드`,
+  description: `무료 회원 가입 후 라이언 보드의 모든 서비스를 이용하세요.`,
+  openGraph: {
+    title: `회원가입 - 라이언 보드`,
+    description: `무료 회원 가입 후 라이언 보드의 모든 서비스를 이용하세요.`,
+    url: `/signup`,
+    images: {
+      url: "/images/front-end.png",
+    },
+  },
+};
 
 export default async function SignupPage() {
   return (

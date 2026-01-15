@@ -17,10 +17,10 @@ export default function Header() {
               <Link href="/info">정보공유</Link>
             </li>
             <li className="hover:text-amber-500 hover:font-semibold">
-              <Link href="/info">자유게시판</Link>
+              <Link href="/free">자유게시판</Link>
             </li>
             <li className="hover:text-amber-500 hover:font-semibold">
-              <Link href="/info">질문게시판</Link>
+              <Link href="/qna">질문게시판</Link>
             </li>
           </ul>
         </div>
@@ -43,10 +43,10 @@ export default function Header() {
           </form>
 
           <div className="flex justify-end">
-            <Link href="/user/login" className="bg-orange-500 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">
+            <Link href="/login" className="bg-orange-500 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">
               로그인
             </Link>
-            <Link href="/user/signup" className="bg-gray-900 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">
+            <Link href="/signup" className="bg-gray-900 py-1 px-2 text-sm text-white font-semibold ml-2 hover:bg-amber-400 rounded">
               회원가입
             </Link>
           </div>

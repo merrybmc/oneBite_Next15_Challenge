@@ -1,8 +1,11 @@
 import "./globals.css";
-import Link from "next/link";
-import Image from "next/image";
 import Header from "@/app/components/common/Header";
 import Footer from "@/app/components/common/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://lion-board.vercel.app"),
+};
 
 export default function RootLayout({
   children,

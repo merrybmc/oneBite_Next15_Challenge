@@ -1,15 +1,33 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
-export default async function NewPage() {
+export async function generateMetadata({ params }: { params: Promise<{ boardType: string }> }): Promise<Metadata> {
+  const { boardType } = await params;
+  return {
+    title: `${boardType} - 게시글 등록`,
+    description: `${boardType} - 게시글을 등록하세요.`,
+    openGraph: {
+      title: `${boardType} - 게시글 등록`,
+      description: `${boardType} - 게시글을 등록하세요`,
+      url: `/${boardType}/new`,
+      images: {
+        url: "/images/front-end.png",
+      },
+    },
+  };
+}
+
+export default async function NewPage({ params }: { params: Promise<{ boardType: string }> }) {
+  const { boardType } = await params;
   return (
     <main className="flex-1 min-w-[320px] p-4">
       <div className="text-center py-4">
         <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-200">게시글 등록</h2>
       </div>
       <section className="mb-8 p-4">
-        <form action="/info/1">
+        <form action={`/${boardType}`}>
           <div className="my-4">
-            <label className="block text-lg content-center" for="title">
+            <label className="block text-lg content-center" htmlFor="title">
               제목
             </label>
             <input
@@ -39,7 +57,10 @@ export default async function NewPage() {
             <button type="submit" className="bg-orange-500 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">
               등록
             </button>
-            <Link href="/info" className="bg-gray-900 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded">
+            <Link
+              href={`/${boardType}`}
+              className="bg-gray-900 py-1 px-4 text-base text-white font-semibold ml-2 hover:bg-amber-400 rounded"
+            >
               취소
             </Link>
           </div>
